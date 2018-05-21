@@ -9,8 +9,10 @@ import App from './components/App.vue';
 import Index from './components/Index.vue';
 import Story from './components/Story.vue';
 import StoryItem from './components/StoryItem.vue';
+import Footer from './components/Footer.vue';
 
 Vue.component("story-item", StoryItem);
+Vue.component("app-footer", Footer);
 
 const router = new VueRouter({
   routes: [

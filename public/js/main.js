@@ -796,6 +796,7 @@ module.exports = g;
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data() {
@@ -810,6 +811,15 @@ module.exports = g;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -891,6 +901,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Index_vue__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Story_vue__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_StoryItem_vue__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Footer_vue__ = __webpack_require__(34);
 
 
 
@@ -903,7 +914,9 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
 
 
 
+
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].component("story-item", __WEBPACK_IMPORTED_MODULE_6__components_StoryItem_vue__["a" /* default */]);
+__WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].component("app-footer", __WEBPACK_IMPORTED_MODULE_7__components_Footer_vue__["a" /* default */]);
 
 const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
   routes: [
@@ -13730,7 +13743,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.paragraphs-wrapper[data-v-77abff19]{margin:4em 0\n}\n.content-wrapper[data-v-77abff19]{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center\n}\n.content-wrapper .title-wrapper[data-v-77abff19]{padding:1em;text-align:center\n}\n.content-wrapper .title-wrapper .title[data-v-77abff19]{font-family:Chivo,Roboto,sans-serif;text-transform:uppercase;font-weight:300;letter-spacing:.3em\n}\n.content-wrapper .title-wrapper .subtitle[data-v-77abff19]{font-size:2em;font-family:Merriweather,serif;font-weight:700;font-style:italic\n}", ""]);
+exports.push([module.i, "\n.paragraphs-wrapper[data-v-77abff19]{margin:4em 0\n}\n.content-wrapper[data-v-77abff19]{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center\n}\n.content-wrapper .title-wrapper[data-v-77abff19]{padding:1em;text-align:center;margin:4em 0\n}\n.content-wrapper .title-wrapper .title[data-v-77abff19]{font-family:Chivo,Roboto,sans-serif;text-transform:uppercase;font-weight:300;letter-spacing:.3em\n}\n.content-wrapper .title-wrapper .subtitle[data-v-77abff19]{font-size:2em;font-family:Merriweather,serif;font-weight:700;font-style:italic\n}", ""]);
 
 // exports
 
@@ -13746,44 +13759,50 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "global-wrapper" } }, [
-    _c("div", { staticClass: "splash-wrapper" }, [
-      _c("div", { staticClass: "background-wrapper" }, [
-        _c(
-          "video",
-          {
-            attrs: {
-              loop: "loop",
-              muted: "muted",
-              autoplay: "autoplay",
-              poster: "img/photoessay/1.jpg"
+  return _c(
+    "div",
+    { attrs: { id: "global-wrapper" } },
+    [
+      _c("div", { staticClass: "splash-wrapper" }, [
+        _c("div", { staticClass: "background-wrapper" }, [
+          _c(
+            "video",
+            {
+              attrs: {
+                loop: "loop",
+                muted: "muted",
+                autoplay: "autoplay",
+                poster: "img/photoessay/1.jpg"
+              },
+              domProps: { muted: true }
             },
-            domProps: { muted: true }
-          },
-          [
-            _c("source", {
-              attrs: { src: "videos/sitner.mp4", type: "video/mp4" }
-            })
-          ]
-        )
+            [
+              _c("source", {
+                attrs: { src: "videos/sitner.mp4", type: "video/mp4" }
+              })
+            ]
+          )
+        ]),
+        _c("div", { staticClass: "overlay-wrapper" }),
+        _vm._m(0)
       ]),
-      _c("div", { staticClass: "overlay-wrapper" }),
-      _vm._m(0)
-    ]),
-    _vm._m(1),
-    _c("div", { staticClass: "section stories-wrapper" }, [
-      _c("div", { staticClass: "center-wrapper" }, [
-        _c("div", { staticClass: "subheading" }, [_vm._v("See the stories")]),
-        _c(
-          "div",
-          { staticClass: "stories" },
-          _vm._l(_vm.shared.database, function(story) {
-            return _c("story-item", { attrs: { story: story } })
-          })
-        )
-      ])
-    ])
-  ])
+      _vm._m(1),
+      _c("div", { staticClass: "section stories-wrapper" }, [
+        _c("div", { staticClass: "center-wrapper" }, [
+          _c("div", { staticClass: "subheading" }, [_vm._v("See the stories")]),
+          _c(
+            "div",
+            { staticClass: "stories" },
+            _vm._l(_vm.shared.database, function(story) {
+              return _c("story-item", { attrs: { story: story } })
+            })
+          )
+        ])
+      ]),
+      _c("app-footer")
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -13943,7 +13962,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.content-wrapper[data-v-0dc105bc]{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:end;-webkit-align-items:flex-end;-moz-box-align:end;-ms-flex-align:end;align-items:flex-end\n}\n.content-wrapper .center-wrapper[data-v-0dc105bc]{max-width:800px;width:90%\n}\n.content-wrapper .center-wrapper .type[data-v-0dc105bc]{font-family:Chivo,Roboto,sans-serif;font-weight:300;letter-spacing:.3em;text-transform:uppercase;opacity:.5;font-style:italic;font-size:.8em\n}\n.content-wrapper .center-wrapper .title[data-v-0dc105bc]{font-size:2em;font-weight:400;font-family:Merriweather,serif;margin:.2em 0\n}\n.content-wrapper .center-wrapper .byline[data-v-0dc105bc]{opacity:.5\n}", ""]);
+exports.push([module.i, "\n.video-wrapper[data-v-0dc105bc]{margin-top:4em;width:100%\n}\n.video-wrapper .spacer[data-v-0dc105bc]{width:100%;padding-bottom:56.25%;background-color:#111\n}\n.video-wrapper iframe[data-v-0dc105bc]{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;border:0\n}\n.stories-wrapper[data-v-0dc105bc]{margin-top:5em\n}\n.content-wrapper[data-v-0dc105bc]{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:end;-webkit-align-items:flex-end;-moz-box-align:end;-ms-flex-align:end;align-items:flex-end\n}\n.content-wrapper .center-wrapper[data-v-0dc105bc]{max-width:800px;width:90%\n}\n.content-wrapper .center-wrapper .return[data-v-0dc105bc]{margin-bottom:3em;text-transform:uppercase;letter-spacing:.3em;opacity:.25;cursor:pointer;text-decoration:none;display:block;color:#fff\n}\n.content-wrapper .center-wrapper .return[data-v-0dc105bc]:hover{opacity:1\n}\n.content-wrapper .center-wrapper .type[data-v-0dc105bc]{font-family:Chivo,Roboto,sans-serif;font-weight:300;letter-spacing:.3em;text-transform:uppercase;opacity:.5;font-style:italic;font-size:.8em\n}\n.content-wrapper .center-wrapper .title[data-v-0dc105bc]{font-size:2em;font-weight:400;font-family:Merriweather,serif;margin:.2em 0\n}\n.content-wrapper .center-wrapper .byline[data-v-0dc105bc]{opacity:.5\n}", ""]);
 
 // exports
 
@@ -13959,47 +13978,80 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "global-wrapper" } }, [
-    _c("div", { staticClass: "splash-wrapper" }, [
-      _c("div", {
-        staticClass: "background-wrapper",
-        style: { backgroundImage: "url(" + _vm.story.cover_url + ")" }
-      }),
-      _c("div", { staticClass: "overlay-wrapper" }),
-      _c("div", { staticClass: "content-wrapper" }, [
-        _c("div", { staticClass: "center-wrapper" }, [
-          _c("div", { staticClass: "title-wrapper" }, [
-            _c("div", { staticClass: "type" }, [
-              _vm._v(_vm._s(_vm.story.type_name))
-            ]),
-            _c("div", { staticClass: "title" }, [
-              _vm._v(_vm._s(_vm.story.title))
-            ]),
-            _c("div", { staticClass: "byline" }, [
-              _vm._v(_vm._s(_vm.story.byline))
+  return _c(
+    "div",
+    { attrs: { id: "global-wrapper" } },
+    [
+      _c("div", { staticClass: "splash-wrapper" }, [
+        _c("div", {
+          staticClass: "background-wrapper",
+          style: { backgroundImage: "url(" + _vm.story.cover_url + ")" }
+        }),
+        _c("div", { staticClass: "overlay-wrapper" }),
+        _c("div", { staticClass: "content-wrapper" }, [
+          _c(
+            "div",
+            { staticClass: "center-wrapper" },
+            [
+              _c("router-link", { staticClass: "return", attrs: { to: "/" } }, [
+                _vm._v("◀ See all stories")
+              ]),
+              _c("div", { staticClass: "title-wrapper" }, [
+                _c("div", { staticClass: "type" }, [
+                  _vm._v(_vm._s(_vm.story.type_name))
+                ]),
+                _c("div", { staticClass: "title" }, [
+                  _vm._v(_vm._s(_vm.story.title))
+                ]),
+                _c("div", { staticClass: "byline" }, [
+                  _vm._v(_vm._s(_vm.story.byline))
+                ])
+              ])
+            ],
+            1
+          )
+        ])
+      ]),
+      _vm.story.type_id == "video"
+        ? _c("div", { staticClass: "section" }, [
+            _c("div", { staticClass: "center-wrapper" }, [
+              _c("div", { staticClass: "video-wrapper" }, [
+                _c("div", { staticClass: "spacer" }),
+                _c("iframe", {
+                  attrs: {
+                    src: _vm.story.iframe_url,
+                    frameborder: "0",
+                    allow: "autoplay; encrypted-media",
+                    allowfullscreen: "allowfullscreen"
+                  }
+                })
+              ])
             ])
           ])
+        : _c("div", {
+            staticClass: "story-content",
+            domProps: { innerHTML: _vm._s(_vm.story.body) }
+          }),
+      _c("div", { staticClass: "section stories-wrapper" }, [
+        _c("div", { staticClass: "center-wrapper" }, [
+          _c("div", { staticClass: "subheading" }, [
+            _vm._v("See all the stories")
+          ]),
+          _c(
+            "div",
+            { staticClass: "stories" },
+            _vm._l(_vm.shared.database, function(story) {
+              return _c("story-item", { attrs: { story: story } })
+            })
+          )
         ])
-      ])
-    ]),
-    _vm.story.type == "video"
-      ? _c("div", { staticClass: "section" }, [_vm._m(0)])
-      : _c("div", {
-          staticClass: "story-content",
-          domProps: { innerHTML: _vm._s(_vm.story.body) }
-        })
-  ])
+      ]),
+      _c("app-footer")
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "center-wrapper" }, [
-      _c("div", { staticClass: "video-wrapper" })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 if (false) {
@@ -14159,6 +14211,122 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-063cf16f", { render: render, staticRenderFns: staticRenderFns })
+  }
+}
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_aed04838_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_optionsId_0_node_modules_vue_loader_lib_selector_type_template_index_0_Footer_vue__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_runtime_component_normalizer__ = __webpack_require__(3);
+var disposed = false
+/* script */
+var __vue_script__ = null
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+
+var Component = Object(__WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_runtime_component_normalizer__["a" /* default */])(
+  __vue_script__,
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_aed04838_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_optionsId_0_node_modules_vue_loader_lib_selector_type_template_index_0_Footer_vue__["a" /* render */],
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_aed04838_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_template_compiler_preprocessor_engine_pug_optionsId_0_node_modules_vue_loader_lib_selector_type_template_index_0_Footer_vue__["b" /* staticRenderFns */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "source/js/components/Footer.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-aed04838", Component.options)
+  } else {
+    hotAPI.reload("data-v-aed04838", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "section", attrs: { id: "footer-wrapper" } },
+      [
+        _c("div", { staticClass: "center-wrapper" }, [
+          _c("div", { staticClass: "logos-wrapper" }, [
+            _c("img", {
+              staticClass: "theguidon",
+              attrs: { src: "img/logos/theguidon.png" }
+            }),
+            _c("img", {
+              staticClass: "thecrusader",
+              attrs: { src: "img/logos/thecrusader.png" }
+            })
+          ]),
+          _c("div", { staticClass: "subheading" }, [
+            _vm._v("About the Interactive")
+          ]),
+          _c("div", { staticClass: "bylines" }, [
+            _c("div", [
+              _vm._v("A joint project by The GUIDON and The Crusader")
+            ]),
+            _c("div", [_vm._v("Introduction written by Liam C. Lu")]),
+            _c("div", [
+              _vm._v(
+                "Interactive and graphics by Jaia G. Corral, Mike del Castillo, and Meg F. Villena"
+              )
+            ]),
+            _c("div", [_vm._v("Photos by Janine S. Torre and Zach G. Garcia")]),
+            _c("div", [
+              _vm._v("Videos by Marga Magalong and Patricia Villoria")
+            ])
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-aed04838", { render: render, staticRenderFns: staticRenderFns })
   }
 }
 

@@ -12,6 +12,7 @@ html, body, #global-wrapper
   background-color: $black
   color: $white
 
+
 *
   position: relative
   box-sizing: border-box
@@ -34,24 +35,51 @@ html, body, #global-wrapper
   display: flex
   justify-content: center
   align-items: center
-  .text
-    color: $white
-    padding: 2em
-    text-align: center
-    .title
-      font-weight: 300
-      font-size: 0.9em
-      text-transform: uppercase
-      letter-spacing: $letter-spacing
-    .subtitle
-      font-family: $font-serif
-      font-weight: 700
-      font-size: 1.2em
-      font-style: italic
-    .collab
-      padding: 0.7em 2em
-      font-size: 0.9em
-      opacity: 0.5
+  .center-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    .spinner-wrapper
+      margin: auto
+      margin-bottom: 1em
+      $size: 2em
+      .spinner
+        width: $size
+        height: $size
+        animation: spin 0.5s infinite linear
+        @keyframes spin
+          from
+            transform: rotate(0deg)
+          to
+            transform: rotate(360deg)
+        .mask
+          width: $size/2
+          height: $size/2
+          overflow: hidden
+          .circle
+            width: $size
+            height: $size
+            border: 2px solid $white
+            border-radius: 50%
+    .text
+      color: $white
+      padding: 2em
+      text-align: center
+      .title
+        font-weight: 300
+        font-size: 0.9em
+        text-transform: uppercase
+        letter-spacing: $letter-spacing
+      .subtitle
+        font-family: $font-serif
+        font-weight: 700
+        font-size: 1.2em
+        font-style: italic
+      .collab
+        padding: 0.7em 2em
+        font-size: 0.9em
+        opacity: 0.5
 
 .splash-wrapper
   .background-wrapper
@@ -131,6 +159,7 @@ p
   background-color: #111111
   margin-top: 2em
   padding: 4em 0
+  padding-bottom: 1em
   &.subheading
     margin-bottom: 2em
   &, *
@@ -220,3 +249,14 @@ p
     font-weight: 300
   a
     color: white
+
+#footer-wrapper
+  padding-top: 4em
+  padding-bottom: 5em
+  text-align: center
+  .subheading
+    margin-top: 2em
+    margin-bottom: 1em
+  .bylines
+    line-height: 1.5em
+    opacity: 0.5

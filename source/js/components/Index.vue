@@ -26,6 +26,7 @@
         .subheading See the stories
         .stories
           story-item(v-for=`story in shared.database` :story=`story`)
+    app-footer
 </template>
 
 <script>
@@ -52,6 +53,7 @@ export default {
     .title-wrapper
       padding: 1em
       text-align: center
+      margin: 4em 0
       .title
         font-family: $font-sans-serif
         text-transform: uppercase
