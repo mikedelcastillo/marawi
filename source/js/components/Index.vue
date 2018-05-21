@@ -16,7 +16,7 @@
           .arrow-wrapper
             .line.line-1
             .line.line-2
-    .section
+    .section.paragraphs-wrapper
       .center-wrapper
         p On May 23, 2017, terrorist affiliates of the Islamic State laid siege to the Islamic City of Marawi, the provincial capital of Lanao del Sur and one of the most important urban centers in Muslim Mindanao. The terrorists spared none in their conquest of the city, killing wantonly and taking freely from the residents. Christians and Muslims alike were the victims of their cruel and inhumane actions.
         p But gradually, after months of fighting between government forces and the insurgents, Secretary of Defense Delfin Lorenzana declared the end of combat operations on October 23, 2017, and the rehabilitation program could begin in earnest.
@@ -38,9 +38,11 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
   @import source/sass/variables
 
+  .paragraphs-wrapper
+    margin: 4em 0
 
   .content-wrapper
     display: flex

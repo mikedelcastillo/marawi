@@ -65,14 +65,18 @@ html, body, #global-wrapper
       background-repeat: no-repeat
       background-position: center
       min-height: 300px
+      z-index: 0
   .overlay-wrapper
     background: $gradient
+    z-index: 1
   .content-wrapper, .overlay-wrapper
     position: absolute
     top: 0
     left: 0
     width: 100%
     height: 100%
+  .content-wrapper
+    z-index: 2
 
 p
   font-family: $font-serif
@@ -80,7 +84,8 @@ p
   font-weight: 300
   opacity: 0.8
   margin: auto
-  max-width: 800px
+  margin-bottom: 1.5em
+  max-width: $max-width
 
 .logos-wrapper
   display: flex
@@ -112,7 +117,7 @@ p
   width: 100%
   .center-wrapper
     margin: auto
-    width: 90%
+    width: 100% - $perc * 2
     max-width: 1200px
 
 .subheading
@@ -125,21 +130,50 @@ p
 .stories-wrapper
   background-color: #111111
   margin-top: 2em
-  padding-top: 2em
-  padding-bottom: 2em
+  padding: 4em 0
   &.subheading
     margin-bottom: 2em
   &, *
     text-decoration: none
     color: $white
   .stories
+    margin: 4em 0
     display: flex
     flex-wrap: wrap
     flex-direction: row
+    justify-content: space-between
     .story-item
       display: block
-      width: 25%
-      height: 20em
+      margin-bottom: $gutter
+      $break-1: $item-width + $gutter * 2
+      $break-2: $break-1 + $item-width + $gutter
+      $break-3: $break-2 + $item-width + $gutter
+      $break-4: $break-3 + $item-width + $gutter
+
+      +range(0, $break-2 - 1)
+        width: 100%
+        flex-basis: 100%
+      +range($break-2, $break-3 - 1)
+        width: calc(50% - #{$gutter * 1 / 2})
+        flex-basis: calc(50% - #{$gutter * 1 / 2})
+        &:nth-of-type(1)
+          width: 100%
+          flex-basis: 100%
+      +range($break-3, $break-4 - 1)
+        width: calc(33.33333% - #{$gutter * 2 / 3})
+        flex-basis: calc(33.33333% - #{$gutter * 2 / 3})
+        &:nth-of-type(2), &:nth-of-type(3)
+          width: calc(66.6666% - #{$gutter * 1 / 3})
+          flex-basis: calc(66.6666% - #{$gutter * 1 / 3})
+      +range($break-4)
+        width: calc(25% - #{$gutter * 3 / 4})
+        flex-basis: calc(25% - #{$gutter * 3 / 4})
+        &:nth-of-type(2)
+          width: calc(50% - #{$gutter * 2 / 4})
+          flex-basis: calc(50% - #{$gutter * 2 / 4})
+
+
+      height: 25em
       .background-wrapper, .details-wrapper, .overlay-wrapper
         top: 0
         left: 0
@@ -175,3 +209,14 @@ p
             font-family: $font-serif
           .byline
             opacity: 0.5
+
+.story-content
+  margin-top: 4em
+  width: 100%
+  img
+    width: 100%
+  p
+    width: 100% - $perc * 2
+    font-weight: 300
+  a
+    color: white
