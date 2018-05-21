@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo:300,400,900|Merriweather:300,300i,400,400i,700,700i')
+
+@import source/sass/variables
+
+html, body, #global-wrapper
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+  font-size: 14px
+  font-family: $font-sans-serif
+  background-color: $black
+  color: $white
+
+*
+  position: relative
+  box-sizing: border-box
+
+.scale-enter-active, .scale-leave-active
+  transition: all .3s
+  transform-origin: top center
+
+.scale-leave, .scale-enter-to
+  opacity: 1
+  transform: translateY(0)
+
+.scale-enter, .scale-leave-to
+  opacity: 0
+  transform: translateY(20px)
+
+#loading-wrapper
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  .text
+    color: $white
+    padding: 2em
+    text-align: center
+    .title
+      font-weight: 300
+      font-size: 0.9em
+      text-transform: uppercase
+      letter-spacing: $letter-spacing
+    .subtitle
+      font-family: $font-serif
+      font-weight: 700
+      font-size: 1.2em
+      font-style: italic
+    .collab
+      padding: 0.7em 2em
+      font-size: 0.9em
+      opacity: 0.5
+
+.splash-wrapper
+  .background-wrapper
+    &, *
+      overflow: hidden
+      width: 100%
+      height: 80vh
+      background-color: $black
+      object-fit: cover
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      min-height: 300px
+  .overlay-wrapper
+    background: $gradient
+  .content-wrapper, .overlay-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+p
+  font-family: $font-serif
+  line-height: 2em
+  font-weight: 300
+  opacity: 0.8
+  margin: auto
+  max-width: 800px
+
+.logos-wrapper
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  img
+    height: auto
+    &.theguidon
+      width: 3em
+      margin-right: 0.5em
+    &.thecrusader
+      width: 3.6em
+
+.arrow-wrapper
+  margin: auto
+  left: 50%
+  .line
+    position: absolute
+    width: 1px
+    height: 1.2em
+    background-color: $white
+    transform-origin: bottom center
+    &.line-1
+      transform: rotate(45deg)
+    &.line-2
+      transform: rotate(-45deg)
+
+.section
+  width: 100%
+  .center-wrapper
+    margin: auto
+    width: 90%
+    max-width: 1200px
+
+.subheading
+  letter-spacing: $letter-spacing
+  font-family: $font-sans-serif
+  font-weight: 300
+  text-transform: uppercase
+  text-align: center
+
+.stories-wrapper
+  background-color: #111111
+  margin-top: 2em
+  padding-top: 2em
+  padding-bottom: 2em
+  &.subheading
+    margin-bottom: 2em
+  &, *
+    text-decoration: none
+    color: $white
+  .stories
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    .story-item
+      display: block
+      width: 25%
+      height: 20em
+      .background-wrapper, .details-wrapper, .overlay-wrapper
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+      .background-wrapper
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        .overlay-wrapper
+          background: $gradient
+        &, .overlay-wrapper
+          position: absolute
+      .details-wrapper
+        padding: 1em
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        .top, .bottom
+          flex-grow: 0
+          flex-shrink: 0
+        .top .type
+          font-family: $font-sans-serif
+          font-weight: 300
+          text-transform: uppercase
+          font-style: italic
+          opacity: 0.5
+          letter-spacing: $letter-spacing
+          font-size: 0.9em
+        .bottom
+          .title
+            font-size: 1.2em
+            font-family: $font-serif
+          .byline
+            opacity: 0.5

@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo:300,400,900|Merriweather:300,300i,400,400i,700,700i");
+html, body, #global-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-family: "Chivo", "Roboto", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+* {
+  position: relative;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.scale-enter-active, .scale-leave-active {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform-origin: top center;
+     -moz-transform-origin: top center;
+      -ms-transform-origin: top center;
+       -o-transform-origin: top center;
+          transform-origin: top center;
+}
+
+.scale-leave, .scale-enter-to {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.scale-enter, .scale-leave-to {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+     -moz-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+       -o-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+#loading-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#loading-wrapper .text {
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+#loading-wrapper .text .title {
+  font-weight: 300;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+#loading-wrapper .text .subtitle {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-style: italic;
+}
+#loading-wrapper .text .collab {
+  padding: 0.7em 2em;
+  font-size: 0.9em;
+  opacity: 0.5;
+}
+
+.splash-wrapper .background-wrapper, .splash-wrapper .background-wrapper * {
+  overflow: hidden;
+  width: 100%;
+  height: 80vh;
+  background-color: black;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+.splash-wrapper .overlay-wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2509803922)), to(black));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2509803922), black);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2509803922), black);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.2509803922), black);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2509803922), black);
+}
+.splash-wrapper .content-wrapper, .splash-wrapper .overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  font-family: "Merriweather", serif;
+  line-height: 2em;
+  font-weight: 300;
+  opacity: 0.8;
+  margin: auto;
+  max-width: 800px;
+}
+
+.logos-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+     -moz-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.logos-wrapper img {
+  height: auto;
+}
+.logos-wrapper img.theguidon {
+  width: 3em;
+  margin-right: 0.5em;
+}
+.logos-wrapper img.thecrusader {
+  width: 3.6em;
+}
+
+.arrow-wrapper {
+  margin: auto;
+  left: 50%;
+}
+.arrow-wrapper .line {
+  position: absolute;
+  width: 1px;
+  height: 1.2em;
+  background-color: white;
+  -webkit-transform-origin: bottom center;
+     -moz-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+       -o-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+.arrow-wrapper .line.line-1 {
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.arrow-wrapper .line.line-2 {
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.section {
+  width: 100%;
+}
+.section .center-wrapper {
+  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.subheading {
+  letter-spacing: 0.3em;
+  font-family: "Chivo", "Roboto", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.stories-wrapper {
+  background-color: #111111;
+  margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.stories-wrapper.subheading {
+  margin-bottom: 2em;
+}
+.stories-wrapper, .stories-wrapper * {
+  text-decoration: none;
+  color: white;
+}
+.stories-wrapper .stories {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.stories-wrapper .stories .story-item {
+  display: block;
+  width: 25%;
+  height: 20em;
+}
+.stories-wrapper .stories .story-item .background-wrapper, .stories-wrapper .stories .story-item .details-wrapper, .stories-wrapper .stories .story-item .overlay-wrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.stories-wrapper .stories .story-item .background-wrapper {
+  background-position: center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+}
+.stories-wrapper .stories .story-item .background-wrapper .overlay-wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2509803922)), to(black));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2509803922), black);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2509803922), black);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.2509803922), black);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2509803922), black);
+}
+.stories-wrapper .stories .story-item .background-wrapper, .stories-wrapper .stories .story-item .background-wrapper .overlay-wrapper {
+  position: absolute;
+}
+.stories-wrapper .stories .story-item .details-wrapper {
+  padding: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.stories-wrapper .stories .story-item .details-wrapper .top, .stories-wrapper .stories .story-item .details-wrapper .bottom {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+     -moz-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+.stories-wrapper .stories .story-item .details-wrapper .top .type {
+  font-family: "Chivo", "Roboto", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-style: italic;
+  opacity: 0.5;
+  letter-spacing: 0.3em;
+  font-size: 0.9em;
+}
+.stories-wrapper .stories .story-item .details-wrapper .bottom .title {
+  font-size: 1.2em;
+  font-family: "Merriweather", serif;
+}
+.stories-wrapper .stories .story-item .details-wrapper .bottom .byline {
+  opacity: 0.5;
+}
