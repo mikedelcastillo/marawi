@@ -5,10 +5,9 @@
       .overlay-wrapper
       .content-wrapper
         .center-wrapper
-          //- .logos-wrapper
-          //-   img.theguidon(src="img/logos/theguidon.png")
-          //-   img.thecrusader(src="img/logos/thecrusader.png")
-          router-link.return(to="/") ◀ See all stories
+          router-link.return(to="/")
+            img(src="img/assets/WHITE-LEFT-POINTING-TRIANGLE.png")
+            | See all stories
           .title-wrapper
             .type {{story.type_name}}
             .title {{story.title}}
@@ -80,6 +79,11 @@ export default {
       max-width: $max-width
       width: 100% - $perc * 2
       .return
+        *
+          vertical-align: middle
+          height: 1em
+          margin-right: 1em
+          display: inline-block
         margin-bottom: 3em
         text-transform: uppercase
         letter-spacing: $letter-spacing
@@ -92,7 +96,7 @@ export default {
           opacity: 1
       .type
         font-family: $font-sans-serif
-        font-weight: 300
+        font-weight: 400
         letter-spacing: $letter-spacing
         text-transform: uppercase
         opacity: 0.5

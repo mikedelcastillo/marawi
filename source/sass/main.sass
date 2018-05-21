@@ -67,7 +67,7 @@ html, body, #global-wrapper
       padding: 2em
       text-align: center
       .title
-        font-weight: 300
+        font-weight: 400
         font-size: 0.9em
         text-transform: uppercase
         letter-spacing: $letter-spacing
@@ -203,7 +203,7 @@ p
 
 
       height: 25em
-      .background-wrapper, .details-wrapper, .overlay-wrapper
+      .background-wrapper, .details-wrapper, .overlay-wrapper, .icon-wrapper
         top: 0
         left: 0
         width: 100%
@@ -214,8 +214,12 @@ p
         background-repeat: no-repeat
         .overlay-wrapper
           background: $gradient
-        &, .overlay-wrapper
+        &, .overlay-wrapper, .icon-wrapper
           position: absolute
+        .icon-wrapper
+          background-position: center 45%
+          background-repeat: no-repeat
+          background-size: 4em
       .details-wrapper
         padding: 1em
         display: flex
@@ -226,7 +230,7 @@ p
           flex-shrink: 0
         .top .type
           font-family: $font-sans-serif
-          font-weight: 300
+          font-weight: 400
           text-transform: uppercase
           font-style: italic
           opacity: 0.5

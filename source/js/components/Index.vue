@@ -11,8 +11,8 @@
             img.theguidon(src="img/logos/theguidon.png")
             img.thecrusader(src="img/logos/thecrusader.png")
           .title-wrapper
-            .title Strenth and Resolve
-            .subtitle Tales of Recovery in the Islamic City
+            .title Strength and Resolve
+            .subtitle Tales of recovery in the Islamic City
           .arrow-wrapper
             .line.line-1
             .line.line-2

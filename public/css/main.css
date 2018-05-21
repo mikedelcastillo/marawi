@@ -165,7 +165,7 @@ html, body, #global-wrapper {
   text-align: center;
 }
 #loading-wrapper .center-wrapper .text .title {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.9em;
   text-transform: uppercase;
   letter-spacing: 0.3em;
@@ -408,7 +408,7 @@ p {
             flex-basis: calc(50% - 5px);
   }
 }
-.stories-wrapper .stories .story-item .background-wrapper, .stories-wrapper .stories .story-item .details-wrapper, .stories-wrapper .stories .story-item .overlay-wrapper {
+.stories-wrapper .stories .story-item .background-wrapper, .stories-wrapper .stories .story-item .details-wrapper, .stories-wrapper .stories .story-item .overlay-wrapper, .stories-wrapper .stories .story-item .icon-wrapper {
   top: 0;
   left: 0;
   width: 100%;
@@ -429,8 +429,16 @@ p {
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.2509803922), black);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2509803922), black);
 }
-.stories-wrapper .stories .story-item .background-wrapper, .stories-wrapper .stories .story-item .background-wrapper .overlay-wrapper {
+.stories-wrapper .stories .story-item .background-wrapper, .stories-wrapper .stories .story-item .background-wrapper .overlay-wrapper, .stories-wrapper .stories .story-item .background-wrapper .icon-wrapper {
   position: absolute;
+}
+.stories-wrapper .stories .story-item .background-wrapper .icon-wrapper {
+  background-position: center 45%;
+  background-repeat: no-repeat;
+  -webkit-background-size: 4em 4em;
+     -moz-background-size: 4em;
+       -o-background-size: 4em;
+          background-size: 4em;
 }
 .stories-wrapper .stories .story-item .details-wrapper {
   padding: 1em;
@@ -464,7 +472,7 @@ p {
 }
 .stories-wrapper .stories .story-item .details-wrapper .top .type {
   font-family: "Chivo", "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   font-style: italic;
   opacity: 0.5;
